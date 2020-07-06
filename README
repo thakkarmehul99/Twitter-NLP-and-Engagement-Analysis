@@ -1,0 +1,10 @@
+Overview
+The goal of this project is to analyze a given twitter user's tweets and observe the relationship between sentiment and engagement for the given tweet. A user's average engagment would be defined by their average number of likes and retweets of their last N (50, 100, 500, etc.) tweets, so we want to explore how the sentiment of the post would affect emgagement and how it would also be affected by any other factors.
+
+The business problem to be solved here is that we would like to know what factors can cause a particular tweet to receive high engagement for the user, as the goal for users and companies is to acquire as much engagment as possible.
+
+The necessary datasets are acquired using https://www.vicinitas.io/, which given a Twitter user, returns a Microsoft Excel spreadsheet of a Twitter user's last 3200 tweets, including features like tweet ID, tweet itself, likes, favorites, time posted, type of tweet (tweet/reply/retweet), etc. The spreadsheet is named "@name_user_tweets.xlsx".
+
+The engagment prediction will be modelled primarily off the relationship between tweets and their setiment (positive or negative). We can observe the content of the tweets themselves, and select a Natural Language Processing model to see what relationships can be found strictly between the tweets and the likes/retweets. We can also create individual linear regression and logistic regression models, where tweet details such as sentiment, word count, tweet length, time posted, emoji usage, etc. can be studied for their varying impacts on overall engagement.
+
+We have chosen to analyze the tweets of a famous video game streamer known by his screen name of Ninja. We anticipate that different users will not have their engagment judged the same way, so our models would have to be completely retrained for different users.
